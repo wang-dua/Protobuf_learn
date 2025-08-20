@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+enum Color{
+	Red = 0; //定义枚类型时, 第一个必须赋值为0
+	Yellow = 1;
+	Green = 2;
+}
+
+message Address{
+	int32 num = 1;
+	bytes addr = 2;
+}
+
+message Person{
+	int32 id = 1;
+	bytes name = 2;
+	bytes sex = 3;
+	int32 age = 4;
+	Address addr = 5;
+	Color color = 6;
+}
+
+
+message Family{
+	repeated bytes name = 1; //数组
+}
